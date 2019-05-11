@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Wydatki">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element  maxOccurs="unbounded" name="Wydatek">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DataDodania" type="xs:date" />
+                            <xs:element name="Rachunek">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Paragon"/>
+                                        <xs:enumeration value="Faktura"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Kategoria">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Jedzenie"/>
+                                        <xs:enumeration value="Samochód"/>
+                                        <xs:enumeration value="Rozrywka"/>
+                                        <xs:enumeration value="Rachunki"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Waluta" type="xs:string" />
+                            <xs:element name="Kwota" type="xs:decimal" />
+                            <xs:element name="Data" type="xs:date" />
+                            <xs:element name="Plik" type="xs:string" />
+                        </xs:sequence>
+                        
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

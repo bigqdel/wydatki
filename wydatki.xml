@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="wydatki.xsl"?>
+<Wydatki xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="wydatki.xsd">
+
+	
+
+<Wydatek><DataDodania>2019-05-11</DataDodania><Rachunek>Paragon</Rachunek><Kategoria>Jedzenie</Kategoria><Waluta>PLN</Waluta><Kwota>123</Kwota><Data>2019-05-01</Data><Plik>2019-05-11 215904.png</Plik></Wydatek><Wydatek><DataDodania>2019-05-11</DataDodania><Rachunek>Paragon</Rachunek><Kategoria>Rozrywka</Kategoria><Waluta>PLN</Waluta><Kwota>666.34</Kwota><Data>2019-05-01</Data><Plik>2019-05-11 215925.png</Plik></Wydatek><Wydatek><DataDodania>2019-05-11</DataDodania><Rachunek>Faktura</Rachunek><Kategoria>Rozrywka</Kategoria><Waluta>PLN</Waluta><Kwota>1123</Kwota><Data>2019-05-28</Data><Plik>2019-05-11 220012.png</Plik></Wydatek><Wydatek><DataDodania>2019-05-11</DataDodania><Rachunek>Faktura</Rachunek><Kategoria>Samoch&#243;d</Kategoria><Waluta>PLN</Waluta><Kwota>3345</Kwota><Data>2019-03-04</Data><Plik>2019-05-11 220044.png</Plik></Wydatek></Wydatki>
