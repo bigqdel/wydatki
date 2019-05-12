@@ -13,6 +13,7 @@ import lxml.html
 dane_xml ="wydatki.xml"  
 dane_xml_xsd="wydatki.xsd"
 dane_xml_xsl="wydatki.xsl"
+dane_xml_xsl2="wydatki2.xsl"
 xml_dodaj=[]
 Kolumny = ["DataDodania","Rachunek","Kategoria",'Kwota','Data','Plik']
 data_zakupu=str
@@ -173,21 +174,24 @@ while True:                 # Główna Pętla
   if event == "Eksport":  
       
       
-      
+      html(dane_xml,dane_xml_xsl2).write("eksportlista.html",pretty_print=True)
       html(dane_xml, dane_xml_xsl).write("eksportabela.html", pretty_print=True)
       
   if event =='Pokaż Plik':
       
       ktorywiersz=(values['table'])
-      print(data[ktorywiersz[0]][5])
-      sgimage=data[ktorywiersz[0]][5]
+      if len(ktorywiersz) !=0:
+          sgimage=data[ktorywiersz[0]][5]
+          plotno= [
+            [sg.Image(filename=sgimage, key='image',size=(1080,600))]
+            ]
+          obrazek = sg.Window('Skan',size=(None,None),force_toplevel=False).Layout(plotno)
+          event, values = obrazek.Read()    
+          obrazek.Close()
       
-      plotno= [
-          [sg.Image(filename=sgimage, key='image',size=(1080,600))]
-      ]
-      obrazek = sg.Window('Skan',size=(None,None),force_toplevel=False).Layout(plotno)
-      event, values = obrazek.Read()    
-      obrazek.Close()
+      else:
+          sg.Popup("wybierz wiersz z tabeli")
+      
       
       
 
